@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dog Compnent matches the dog thing 1`] = `
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    Ana Dogg
+  </dd>
+  <dt>
+    Age
+  </dt>
+  <dd>
+    2
+  </dd>
+  <dt>
+    Weight
+  </dt>
+  <dd>
+    28 lbs
+  </dd>
+</dl>
+`;
