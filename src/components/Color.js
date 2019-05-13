@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 // const name = 'purple';
 // const hex = '#800080';
@@ -12,29 +14,33 @@ function compToHex(rgb) {
 function rgbToHex(rgb) {
   const regex = /(\d{1,3})/g;
   const divided = rgb.match(regex);
-  return '#' + compToHex(divided[0]) + compToHex(divided[1]) + compToHex(divided[2]);
+  let r = parseInt(divided[0]);
+  let g = parseInt(divided[1]);
+  let b = parseInt(divided[2]);
+  return '#' + compToHex(r) + compToHex(g) + compToHex(b);
 }
 
 
-export default function Color(name, hex, rgb) {
-  const color = {
-    name,
-    hex: hex || rgbToHex(rgb),
-    rgb
-  };
-
+function Color({ name, hex, rgb }) {
   return (
     <dl>
       <dt>Name</dt>
-      <dd>{color.name || color.hex}</dd>
+      <dd>{name}</dd>
 
       <dt>Hex</dt>
-      <dd>{color.hex}</dd>
+      <dd>{hex || rgbToHex(rgb)}</dd>
 
       <dt>RGB</dt>
-      <dd>{color.rgb}</dd>
+      <dd>{rgb}</dd>
     </dl>
   );
 }
 
+Color.propTypes = {
+  name: PropTypes.string.isRequired,
+  hex: PropTypes.string,
+  rgb: PropTypes.string.isRequired,
+};
 
+
+export default Color;
