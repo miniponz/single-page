@@ -1,2 +1,2 @@
-# webpack
+# single-page
 single page applications
