@@ -2,7 +2,10 @@
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.[hash].js'
+  },
+  devServer: {
+    port: 7890
   }
 };
 
