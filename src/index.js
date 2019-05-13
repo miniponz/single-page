@@ -1,4 +1,9 @@
-const message = 'testing testing';
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App';
 
-console.log(message);
-console.log(message + 'cool');
+
+render(
+  <App />,
+  document.getElementById('root')
+);

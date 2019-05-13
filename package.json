@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "single page applications",
   "main": "index.js",
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>src/setupTests.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
   "scripts": {
     "test": "jest --verbose",
     "test:watch": "npm run test -- --watch",
