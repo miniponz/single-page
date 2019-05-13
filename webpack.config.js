@@ -1,7 +1,8 @@
+/*eslint-disable-next-line*/
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: './dist/main.[hash].js'
+    filename: 'bundle.js'
   }
 };
 
