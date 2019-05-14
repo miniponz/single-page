@@ -1,4 +1,10 @@
-const message = 'testing testing';
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App';
+// import ColorApp from './components/ColorApp';
 
-console.log(message);
-console.log(message + 'cool');
+
+render(
+  <App />,
+  document.getElementById('root')
+);
